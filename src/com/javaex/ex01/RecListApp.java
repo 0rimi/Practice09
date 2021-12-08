@@ -24,9 +24,7 @@ public class RecListApp {
 		rList.add(r04);
 		
 		//리스트 모두를 draw하는 메소드 실행
-		for( Rectangle r : rList ) {
-			r.draw();
-		}
+		listAllDraw(rList);
 		
 
 		System.out.println("#3번째 사각형(3, 3) 삭제==========================================");
@@ -34,9 +32,7 @@ public class RecListApp {
 		rList.remove(r03);
 		
 		//리스트 모두를 draw하는 메소드 실행
-		for( Rectangle r : rList ) {
-			r.draw();
-		}
+		listAllDraw(rList);
 
 		
 		System.out.println("#4번째 사각형(4, 5)-->(9, 5)로 width 값 변경======================");
@@ -44,9 +40,7 @@ public class RecListApp {
 		r04.setWidth(9);
 		
 		//리스트 모두를 draw하는 메소드 실행
-		for( Rectangle r : rList ) {
-			r.draw();
-		}		
+		listAllDraw(rList);	
 		
 		
 		System.out.println("#모든 사각형의 넓이 합 출력=======================================");
@@ -66,7 +60,10 @@ public class RecListApp {
 	
 	//리스트 모두를 draw하는 메소드
 	public static void listAllDraw(List<Rectangle> list) {
-		//내용작성 
+		//내용작성	
+		for( Rectangle r : list ) {
+		r.draw();
+	}	 
 		
 		
 	}
